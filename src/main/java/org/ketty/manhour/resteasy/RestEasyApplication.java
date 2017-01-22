@@ -55,7 +55,7 @@ public class RestEasyApplication extends Application {
 				for (String clazz : classes) {
 					if (StringUtils.isNotEmpty(clazz)) {
 						try {
-							application.add(Class.forName(clazz));
+							application.add(Class.forName(clazz.trim()));
 						} catch (ClassNotFoundException e) {
 							logger.error(e);
 						}
