@@ -6,4 +6,9 @@
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	<description>Employee man-hour system</description>
+	<modules>
+		<module>man-hour-core</module>
+		
+		<module>man-hour-web</module>
+	</modules>
 </project>
