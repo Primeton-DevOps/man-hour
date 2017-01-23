@@ -54,8 +54,9 @@ public class RestEasyApplication extends Application {
 				String[] classes = content.split(",");
 				for (String clazz : classes) {
 					if (StringUtils.isNotEmpty(clazz)) {
+						clazz = clazz.trim();
 						try {
-							application.add(Class.forName(clazz.trim()));
+							application.add(Class.forName(clazz));
 							System.err.println(String.format("Load RESTful api implements %s.", clazz));
 						} catch (ClassNotFoundException e) {
 							logger.error(e);
